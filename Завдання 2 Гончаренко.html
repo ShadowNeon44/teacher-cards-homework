@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Компактна картка викладача</title>
+    <script>
+        function updateCard() {
+            const name = document.getElementById('fullName').value;
+            document.getElementById('teacherName').textContent = name;
+        }
+    </script>
+</head>
+<body>
+    <h1>Компактна картка викладача</h1>
+    <form onsubmit="event.preventDefault(); updateCard();">
+        <label for="fullName">Введіть ім'я та прізвище:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <button type="submit">Оновити картку</button>
+    </form>
+
+    <figure>
+        <img src="placeholder.jpg" alt="Фото викладача" width="150">
+        <figcaption>
+            <p id="teacherName">Ім'я Прізвище</p>
+            <a href="#">Докладніше</a>
+        </figcaption>
+    </figure>
+</body>
+</html>
